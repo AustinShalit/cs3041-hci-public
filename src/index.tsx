@@ -4,7 +4,7 @@ import {Route, Router, Switch} from 'react-router';
 import { createBrowserHistory } from 'history';
 import Login from "./components/login";
 
-const browserHistory = createBrowserHistory();
+const browserHistory = createBrowserHistory({ basename: '/cs3041-hci' });
 
 export function AppRoutes(): ReactElement {
     return (
