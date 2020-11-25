@@ -5,11 +5,12 @@ import {
     Checkbox,
     Container,
     CssBaseline,
-    FormControlLabel, Grid, Link, makeStyles,
+    FormControlLabel, Grid, makeStyles,
     TextField,
     Typography
 } from "@material-ui/core";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -77,17 +78,18 @@ function Login() {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
+                        component={Link} to="/"
                     >
                         Sign In
                     </Button>
                     <Grid container>
                         <Grid item xs>
-                            <Link href="#" variant="body2">
+                            <Link to="#">
                                 Forgot password?
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link to="#">
                                 {"Don't have an account? Sign Up"}
                             </Link>
                         </Grid>
