@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import {Route, Switch, useParams, useRouteMatch} from "react-router";
 import {TEST_TEAMS} from "../../test-data";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -21,10 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-function TeamListItemLink(props: ListItemProps<'a', { button?: true }>) {
-    return <ListItem button component="a" {...props} />;
-}
-
 function TeamList() {
     const classes = useStyles();
 
@@ -32,9 +29,9 @@ function TeamList() {
         <div className={classes.root}>
             <List>
                 {TEST_TEAMS.map((team) => (
-                    <TeamListItemLink href={`teams/${team.id}`}>
+                    <ListItem button component={Link} to={`teams/${team.id}`}>
                         <ListItemText primary={team.name} />
-                    </TeamListItemLink>
+                    </ListItem>
                 ))}
             </List>
         </div>
