@@ -10,6 +10,7 @@ import {
     Typography
 } from "@material-ui/core";
 import {Route, Switch, useParams, useRouteMatch} from "react-router";
+import {TEST_TEAMS} from "../../test-data";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -30,9 +31,9 @@ function TeamList() {
     return (
         <div className={classes.root}>
             <List>
-                {Array.from(Array(100).keys()).map((teamId) => (
-                    <TeamListItemLink href={`teams/${teamId}`}>
-                        <ListItemText primary={`Team #${teamId}`} />
+                {TEST_TEAMS.map((team) => (
+                    <TeamListItemLink href={`teams/${team.id}`}>
+                        <ListItemText primary={team.name} />
                     </TeamListItemLink>
                 ))}
             </List>

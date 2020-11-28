@@ -10,17 +10,18 @@ import {
     Typography
 } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            width: '100%',
+            flexGrow: 1,
             backgroundColor: theme.palette.background.paper,
         },
         fab: {
-            position: 'absolute',
-            bottom: theme.spacing(15),
-            right: theme.spacing(5)
+            position: 'fixed',
+            bottom: theme.spacing(10),
+            right: theme.spacing(2)
         }
     }),
 );
@@ -42,7 +43,7 @@ function NeedsHelp() {
                     <ListItemText primary="Team #2 – C++ Help" />
                 </NeedsHelpItemLink>
             </List>
-            <Fab className={classes.fab} color={"primary"}>
+            <Fab className={classes.fab} color={"primary"} component={Link} to={`/add`}>
                 <AddIcon/>
             </Fab>
         </div>

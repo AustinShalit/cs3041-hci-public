@@ -78,7 +78,7 @@ function Login() {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
-                        component={Link} to="/"
+                        component={Link} to="/home"
                     >
                         Sign In
                     </Button>
