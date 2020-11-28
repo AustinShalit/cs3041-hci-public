@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Button, FormControl, InputLabel, Select, TextField, Typography} from "@material-ui/core";
 import {CATEGORIES, PRIORITIES, TEST_TEAMS} from "../../test-data";
 import {makeStyles} from "@material-ui/core/styles";
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -67,7 +68,7 @@ function AddRequest() {
                     </Box>
 
                     <Box style={{marginTop: 'auto'}}>
-                        <Button variant="contained" color="primary" fullWidth>Add</Button>
+                        <Button variant="contained" color="primary" fullWidth component={Link} to={'/requests'}>Add</Button>
                     </Box>
                 </Box>
             </form>

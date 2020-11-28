@@ -1,7 +1,7 @@
 import React from 'react';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import HomeIcon from '@material-ui/icons/Restore';
+import HomeIcon from '@material-ui/icons/Home';
 import PeopleIcon from '@material-ui/icons/People';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {Link} from "react-router-dom";
@@ -19,8 +19,8 @@ export default function SimpleBottomNavigation() {
         >
             <BottomNavigationAction
                 component={Link}
-                to="/home"
-                label="Home"
+                to="/requests"
+                label="Requests"
                 icon={<HomeIcon/>}/>
             <BottomNavigationAction
                 component={Link}

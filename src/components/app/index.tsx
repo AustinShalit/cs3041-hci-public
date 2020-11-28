@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from "./Home";
+import Requests from "./Requests";
 import SimpleBottomNavigation from "./BottomNavigation";
 import {Route, Switch} from "react-router";
 import Teams from "./Teams";
@@ -30,9 +30,9 @@ function App() {
         <Box className={classes.root}>
             <Box className={classes.content}>
                 <Switch>
-                    <Route path={`/home`} component={Home}/>
+                    <Route path={`/requests`} component={Requests}/>
                     <Route path={`/teams`} component={Teams}/>
-                    <Route path={`/add`} component={AddRequest}/>
+                    <Route path={`/`} component={Requests}/>
                 </Switch>
             </Box>
             <Box className={classes.footer}>

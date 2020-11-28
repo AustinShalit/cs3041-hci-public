@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    createStyles,
+    createStyles, Divider,
     List,
     ListItem,
     ListItemProps,
@@ -43,7 +43,26 @@ function TeamDetail() {
     const { teamId } = useParams();
 
     return (
-        <Typography variant="h3" align="left">Team {teamId} – Team Name</Typography>
+        <>
+            <Typography variant="h3" align="left">Team {teamId}</Typography>
+            <List>
+                <ListItem button component={Link} to={`/requests/1`}>
+                    <ListItemText primary={"Did not play last match"} />
+                </ListItem>
+                <ListItem button component={Link} to={`/requests/2`}>
+                    <ListItemText primary={"Does not know about loops"} />
+                </ListItem>
+                <ListItem button component={Link} to={`/requests/4`}>
+                    <ListItemText primary={"CAN Disconnected"} />
+                </ListItem>
+            </List>
+            <Divider />
+            <List>
+                <ListItem button component={Link} to={`/requests/3`}>
+                    <ListItemText primary={"Forgot robot at home"} />
+                </ListItem>
+            </List>
+        </>
     )
 }
 
